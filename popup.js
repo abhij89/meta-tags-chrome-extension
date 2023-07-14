@@ -2,7 +2,6 @@ async function getCurrentTab() {
     let queryOptions = {active: true, currentWindow: true};
     return await chrome.tabs.query(queryOptions)
     .then((tabs) => {
-        console.log(tabs);
         return tabs[0];
     })
     .catch((error) => {
